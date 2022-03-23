@@ -60,11 +60,16 @@
 
     <LinearLayout
         android:id="@+id/linearLayout"
-        android:layout_width="407dp"
+        android:layout_width="0dp"
         android:layout_height="55dp"
+        android:layout_marginStart="1dp"
+        android:layout_marginLeft="1dp"
+        android:layout_marginEnd="1dp"
+        android:layout_marginRight="1dp"
         android:orientation="horizontal"
         app:layout_constraintBottom_toBottomOf="parent"
-        tools:layout_editor_absoluteX="1dp">
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent">
 
         <ImageView
             android:id="@+id/imgRpta1"
@@ -72,36 +77,42 @@
             android:layout_height="wrap_content"
             android:layout_weight="1"
             android:maxWidth="30sp"
-            android:maxHeight="30sp" />
+            android:maxHeight="30sp"
+            android:contentDescription="@null" />
 
         <ImageView
             android:id="@+id/imgRpta2"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_weight="1" />
+            android:layout_weight="1"
+            android:contentDescription="@null" />
 
         <ImageView
             android:id="@+id/imgRpta3"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_weight="1" />
+            android:layout_weight="1"
+            android:contentDescription="@null" />
 
         <ImageView
             android:id="@+id/imgRpta4"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_weight="1" />
+            android:layout_weight="1"
+            android:contentDescription="@null" />
 
         <ImageView
             android:id="@+id/imgRpta5"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_weight="1" />
+            android:layout_weight="1"
+            android:contentDescription="@null" />
 
         <ImageView
             android:id="@+id/imgRpta6"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_weight="1" />
+            android:layout_weight="1"
+            android:contentDescription="@null" />
     </LinearLayout>
 </androidx.constraintlayout.widget.ConstraintLayout>

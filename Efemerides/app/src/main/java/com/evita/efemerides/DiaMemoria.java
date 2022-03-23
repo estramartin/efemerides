@@ -14,8 +14,8 @@ public class DiaMemoria extends AppCompatActivity {
             "¿Qué se conmemora el 24 de marzo en Argentina?",
             "¿Cómo se le llamó a este hecho?",
             "¿Cuáles fueron las consecuencias más importante que dejo este proceso en el país?",
-            "Y esta otra?",
-            "Cuando pasó tal cosa?",
+            "¿Cuánto duró la dictadura?",
+            "¿Qué funcionario fue derracado?",
             "Cuando pasó tal cosa?",
             "Cuando pasó tal cosa?",
     };
@@ -41,21 +41,25 @@ public class DiaMemoria extends AppCompatActivity {
 
 
         respuestas[0][0] = "Día de la Independencia";
-        respuestas[0][1] = "Mundial Alemania 2006";
+        respuestas[0][1] = "Día de la Bandera";
         respuestas[0][2] = "Día de la Memoria la Verdad y la Justicia";
         respuestas[0][3] = "Día del Veterano y de los caídos en la guerra de Malvinas";
         respuestas[1][0] = "Proceso de Reorganización Federal";
         respuestas[1][1] = "Proceso de Adaptación Nacional";
         respuestas[1][2] = "Proceso de Adaptación Regional";
         respuestas[1][3] = "Proceso de Reorganización Nacional";
-        respuestas[2][0] = "1958";
-        respuestas[2][1] = "1959";
-        respuestas[2][2] = "1960";
-        respuestas[2][3] = "1961";
-        respuestas[3][0] = "1962";
-        respuestas[3][1] = "1963";
-        respuestas[3][2] = "1964";
-        respuestas[3][3] = "1965";
+        respuestas[2][0] = "Persecución y desaparición de más de 30.000 personas";
+        respuestas[2][1] = "Persecución y desaparición de más de 300.000 personas";
+        respuestas[2][2] = "Persecución y desaparición de menos de 30.000 personas";
+        respuestas[2][3] = "Persecución y desaparición de 30.000 personas";
+        respuestas[3][0] = "Más de 7 años";
+        respuestas[3][1] = "15 años";
+        respuestas[3][2] = "Menos de 3 años";
+        respuestas[3][3] = "2 años";
+        respuestas[4][0] = "María Estela (Isabel) Martínez de Perón";
+        respuestas[4][1] = "Héctor José Cámpora";
+        respuestas[4][2] = "Juan Domingo Perón";
+        respuestas[4][3] = "Ricardo Balbín";
 
         txtpregunta = (TextView) findViewById(R.id.textView);
         btn1 = (Button) findViewById(R.id.button);
@@ -121,12 +125,10 @@ public class DiaMemoria extends AppCompatActivity {
            case 0:{
                if(numero == 1){ imgView1.setBackgroundColor(1);
                    Toast.makeText(this, "Respuesta incorrecta", Toast.LENGTH_SHORT).show();
-                   //int id = getResources().getIdentifier("rptacorrecta","drawable", getPackageName());
                    imgView1.setImageResource (idIncorrecta);
                }
                if(numero == 2){ imgView1.setBackgroundColor(2);
                    Toast.makeText(this, "Respuesta incorrecta", Toast.LENGTH_SHORT).show();
-                 //  int id = getResources().getIdentifier("rptacorrecta","drawable", getPackageName());
                    imgView1.setImageResource (idIncorrecta);
                }
                if(numero == 3){
@@ -134,7 +136,6 @@ public class DiaMemoria extends AppCompatActivity {
                    imgView1.setImageResource (idCorrecta);   }
                if(numero == 4){ imgView1.setBackgroundColor(2);
                    Toast.makeText(this, "Respuesta incorrecta", Toast.LENGTH_SHORT).show();
-                   //int id = getResources().getIdentifier("rptacorrecta","drawable", getPackageName());
                    imgView1.setImageResource (idIncorrecta);
                }
                btn1.setText(respuestas[1][0]);
@@ -146,10 +147,22 @@ public class DiaMemoria extends AppCompatActivity {
                break;
                }
             case 1:{
-                if(numero == 1){ imgView2.setBackgroundColor(1);}
-                if(numero == 2){ imgView2.setBackgroundColor(2);}
-                if(numero == 3){ imgView2.setBackgroundColor(2);}
-                if(numero == 4){ imgView2.setBackgroundColor(2);}
+                if(numero == 1){
+                    Toast.makeText(this, "Respuesta incorrecta", Toast.LENGTH_SHORT).show();
+                    imgView1.setImageResource (idIncorrecta);
+                }
+                if(numero == 2){
+                    Toast.makeText(this, "Respuesta incorrecta", Toast.LENGTH_SHORT).show();
+                    imgView1.setImageResource (idIncorrecta);
+                }
+                if(numero == 3){
+                    Toast.makeText(this, "Respuesta incorrecta", Toast.LENGTH_SHORT).show();
+                    imgView1.setImageResource (idIncorrecta);
+                    }
+                if(numero == 4){
+                    Toast.makeText(this, "Respuesta correcta", Toast.LENGTH_SHORT).show();
+                    imgView1.setImageResource (idCorrecta);
+                }
                 btn1.setText(respuestas[2][0]);
                 btn2.setText(respuestas[2][1]);
                 btn3.setText(respuestas[2][2]);
@@ -159,10 +172,22 @@ public class DiaMemoria extends AppCompatActivity {
                 break;
             }
             case 2:{
-                if(numero == 1){ imgView3.setBackgroundColor(1);}
-                if(numero == 2){ imgView3.setBackgroundColor(2);}
-                if(numero == 3){ imgView3.setBackgroundColor(2);}
-                if(numero == 4){ imgView3.setBackgroundColor(2);}
+                if(numero == 1){
+                    Toast.makeText(this, "Respuesta incorrecta", Toast.LENGTH_SHORT).show();
+                    imgView1.setImageResource (idIncorrecta);
+                }
+                if(numero == 2){
+                    Toast.makeText(this, "Respuesta incorrecta", Toast.LENGTH_SHORT).show();
+                    imgView1.setImageResource (idIncorrecta);
+                }
+                if(numero == 3){
+                    Toast.makeText(this, "Respuesta incorrecta", Toast.LENGTH_SHORT).show();
+                    imgView1.setImageResource (idIncorrecta);
+                }
+                if(numero == 4){
+                    Toast.makeText(this, "Respuesta correcta", Toast.LENGTH_SHORT).show();
+                    imgView1.setImageResource (idCorrecta);
+                }
                 btn1.setText(respuestas[3][0]);
                 btn2.setText(respuestas[3][1]);
                 btn3.setText(respuestas[3][2]);
@@ -172,10 +197,22 @@ public class DiaMemoria extends AppCompatActivity {
                 break;
             }
             case 3:{
-                if(numero == 1){ imgView4.setBackgroundColor(1);}
-                if(numero == 2){ imgView4.setBackgroundColor(2);}
-                if(numero == 3){ imgView4.setBackgroundColor(2);}
-                if(numero == 4){ imgView4.setBackgroundColor(2);}
+                if(numero == 1){
+                    Toast.makeText(this, "Respuesta correcta", Toast.LENGTH_SHORT).show();
+                    imgView1.setImageResource (idCorrecta);
+                }
+                if(numero == 2){
+                    Toast.makeText(this, "Respuesta incorrecta", Toast.LENGTH_SHORT).show();
+                    imgView1.setImageResource (idIncorrecta);
+                }
+                if(numero == 3){
+                    Toast.makeText(this, "Respuesta incorrecta", Toast.LENGTH_SHORT).show();
+                    imgView1.setImageResource (idIncorrecta);
+                }
+                if(numero == 4){
+                    Toast.makeText(this, "Respuesta incorrecta", Toast.LENGTH_SHORT).show();
+                    imgView1.setImageResource (idIncorrecta);
+                }
                 btn1.setText(respuestas[4][0]);
                 btn2.setText(respuestas[4][1]);
                 btn3.setText(respuestas[4][2]);
@@ -185,10 +222,22 @@ public class DiaMemoria extends AppCompatActivity {
                 break;
             }
             case 4:{
-                if(numero == 1){ imgView5.setBackgroundColor(1);}
-                if(numero == 2){ imgView5.setBackgroundColor(2);}
-                if(numero == 3){ imgView5.setBackgroundColor(2);}
-                if(numero == 4){ imgView5.setBackgroundColor(2);}
+                if(numero == 1){
+                    Toast.makeText(this, "Respuesta correcta", Toast.LENGTH_SHORT).show();
+                    imgView1.setImageResource (idCorrecta);
+                }
+                if(numero == 2){
+                    Toast.makeText(this, "Respuesta incorrecta", Toast.LENGTH_SHORT).show();
+                    imgView1.setImageResource (idIncorrecta);
+                }
+                if(numero == 3){
+                    Toast.makeText(this, "Respuesta incorrecta", Toast.LENGTH_SHORT).show();
+                    imgView1.setImageResource (idIncorrecta);
+                }
+                if(numero == 4){
+                    Toast.makeText(this, "Respuesta incorrecta", Toast.LENGTH_SHORT).show();
+                    imgView1.setImageResource (idIncorrecta);
+                }
                 btn1.setText(respuestas[5][0]);
                 btn2.setText(respuestas[5][1]);
                 btn3.setText(respuestas[5][2]);

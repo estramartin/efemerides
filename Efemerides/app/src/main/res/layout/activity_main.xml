@@ -12,9 +12,10 @@
         android:layout_width="wrap_content"
         android:layout_height="729dp"
         app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
         app:srcCompat="@drawable/whatsapp_image_2022_03_04_at_22_36_01"
-        tools:layout_editor_absoluteX="0dp" />
+        android:contentDescription="@null" />
 
     <Button
         android:id="@+id/button2"

@@ -17,11 +17,15 @@ public class MainActivity extends AppCompatActivity {
 
     //Comienzo parte logica
 
+
+    /*public void Jugar(View view){
+        Intent ListaJuegos = new Intent(this, com.evita.efemerides.JuegosActivity.class);
+        startActivity(ListaJuegos);
+
+    }*/
     public void Jugar(View view){
-        Intent DiaMemoria = new Intent(this, com.evita.efemerides.DiaMemoria.class);
-        startActivity(DiaMemoria);
-
-
+        Intent Juego = new Intent(this, com.evita.efemerides.DiaMemoria.class);
+        startActivity(Juego);
     }
 
 
