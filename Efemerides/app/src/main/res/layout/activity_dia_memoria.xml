@@ -15,7 +15,7 @@
         app:layout_constraintHorizontal_bias="0.571"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="1.0"
+        app:layout_constraintVertical_bias="0.941"
         app:srcCompat="@drawable/dia_memoria2" />
 
     <TextView
@@ -34,7 +34,7 @@
         android:id="@+id/button"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="108dp"
+        android:layout_marginTop="100dp"
         android:enabled="false"
         android:text="@string/btnRespuesta1"
         app:layout_constraintEnd_toEndOf="parent"
