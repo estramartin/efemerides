@@ -14,20 +14,20 @@ import android.widget.Toast;
 public class MainActivity extends AppCompatActivity {
 
     private Button btnSalir;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
         btnSalir = (Button) findViewById(R.id.button2);
-
-        btnSalir.setOnClickListener(new View.OnClickListener(){
+        btnSalir.setOnClickListener(new View.OnClickListener() {
             @Override
-            public void onClick(View view){
-                finish();
-                System.exit(0);
+            public void onClick(View view) {
+                finishAffinity();
             }
         });
+
 
      /*   DbHelper dbHelper = new DbHelper(MainActivity.this);
         SQLiteDatabase db  = dbHelper.getWritableDatabase();
@@ -39,10 +39,7 @@ public class MainActivity extends AppCompatActivity {
 
       */
 
-
-
     }
-
 
     //Comienzo parte logica
 
@@ -57,5 +54,7 @@ public class MainActivity extends AppCompatActivity {
         startActivity(Juego);
     }
 
-
+    /*public void Salir(View view){
+        finishAffinity();
+    }*/
 }
