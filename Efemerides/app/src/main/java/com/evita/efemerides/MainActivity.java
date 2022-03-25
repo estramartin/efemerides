@@ -44,15 +44,17 @@ public class MainActivity extends AppCompatActivity {
     //Comienzo parte logica
 
 
-    /*public void Jugar(View view){
-        Intent ListaJuegos = new Intent(this, com.evita.efemerides.JuegosActivity.class);
-        startActivity(ListaJuegos);
+    public void Jugar(View view){
+        Intent listaJuegos = new Intent(this, MenuJuegos.class);
+        startActivity(listaJuegos);
 
-    }*/
+    }
+
+/*
     public void Jugar(View view){
         Intent Juego = new Intent(this, com.evita.efemerides.DiaMemoria.class);
-        startActivity(Juego);
-    }
+        tartActivity(Juego);
+    }*/
 
     /*public void Salir(View view){
         finishAffinity();

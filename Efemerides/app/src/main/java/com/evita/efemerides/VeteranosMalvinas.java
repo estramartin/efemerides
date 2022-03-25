@@ -10,7 +10,18 @@ import android.widget.ImageView;
 import android.widget.TextView;
 import android.widget.Toast;
 
-public class DiaMemoria extends AppCompatActivity {
+public class VeteranosMalvinas extends AppCompatActivity {
+
+    int contadorPreguntas =0;
+    private Button btn1;
+    private Button btn2;
+    private Button btn3;
+    private Button btn4;
+    private Button btnVolver;
+    private TextView txtpregunta;
+    private ImageView imgView1;
+
+    String [][] respuestas = new String[24][18];
     String [] preguntas = new String []{
             "El Día Nacional de la Memoria por la Verdad y la Justicia es el día en el que se conmemora en Argentina a...",
             "¿Qué nombre le dieron los militares a la dictadura instaurada el 24 de marzo de 1976?",
@@ -34,27 +45,11 @@ public class DiaMemoria extends AppCompatActivity {
             "Una de estas afirmaciones es FALSA",
 
     };
-    String [][] respuestas = new String[24][18];
-    int contadorPreguntas =0;
-    private Button btn1;
-    private Button btn2;
-    private Button btn3;
-    private Button btn4;
-    private Button btnVolver;
-    private TextView txtpregunta;
-    private ImageView imgView1;
-    private ImageView imgView2;
-    private ImageView imgView3;
-    private ImageView imgView4;
-    private ImageView imgView5;
-    private ImageView imgView6;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_dia_memoria);
-
-
+        setContentView(R.layout.activity_veteranos_malvinas);
 
         respuestas[0][0] = "la Independencia";
         respuestas[0][1] = "la Bandera";
@@ -137,13 +132,14 @@ public class DiaMemoria extends AppCompatActivity {
         respuestas[19][2] = "El Presidente de facto durante la guerra de Malvinas era el Leopoldo Fortunato Galtieri";
         respuestas[19][3] = "El Presidente de facto durante la guerra de Malvinas era el General Roberto Viola";// correcta
 
-        txtpregunta = (TextView) findViewById(R.id.textView);
-        btn1 = (Button) findViewById(R.id.button);
-        btn2 = (Button) findViewById(R.id.button3);
-        btn3 = (Button) findViewById(R.id.button4);
-        btn4 = (Button) findViewById(R.id.button5);
 
-        btnVolver = (Button) findViewById(R.id.btnVolver);
+        txtpregunta = (TextView) findViewById(R.id.textView2);
+        btn1 = (Button) findViewById(R.id.button8);
+        btn2 = (Button) findViewById(R.id.button9);
+        btn3 = (Button) findViewById(R.id.button10);
+        btn4 = (Button) findViewById(R.id.button11);
+
+        btnVolver = (Button) findViewById(R.id.btnVolver2);
 
         btn1.setEnabled(true);
         btn2.setEnabled(true);
@@ -157,12 +153,8 @@ public class DiaMemoria extends AppCompatActivity {
         btn3.setText(respuestas[0][2]);
         btn4.setText(respuestas[0][3]);
 
-        imgView1 = (ImageView) findViewById(R.id.imgRpta1);
-        imgView2 = (ImageView) findViewById(R.id.imgRpta2);
-        imgView3 = (ImageView) findViewById(R.id.imgRpta3);
-        imgView4 = (ImageView) findViewById(R.id.imgRpta4);
-        imgView5 = (ImageView) findViewById(R.id.imgRpta5);
-        imgView6 = (ImageView) findViewById(R.id.imgRpta6);
+        imgView1 = (ImageView) findViewById(R.id.imgRpta);
+
 
         btn1.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -197,8 +189,6 @@ public class DiaMemoria extends AppCompatActivity {
 
             }
         });
-
-
     }
 
     public void Volver(View view){
@@ -206,41 +196,39 @@ public class DiaMemoria extends AppCompatActivity {
         startActivity(menu);
     }
 
-
-
     public void cargarPreguntas(View view, int numero){
         int idCorrecta = getResources().getIdentifier("rptacorrecta","drawable", getPackageName());
         int idIncorrecta = getResources().getIdentifier("rtaincorrecta","drawable", getPackageName());
 
         switch (contadorPreguntas){
-           case 0:{
-               if(numero == 1){ imgView1.setBackgroundColor(1);
-                   //Toast.makeText(this, "Respuesta incorrecta", Toast.LENGTH_LONG).show();
-                   imgView1.setImageResource (idIncorrecta);
-                   Toast.makeText(this, "La respuesta correcta era: " + respuestas[0][2], Toast.LENGTH_LONG).show();
-               }
-               if(numero == 2){ imgView1.setBackgroundColor(2);
-                   //Toast.makeText(this, "Respuesta incorrecta", Toast.LENGTH_LONG).show();
-                   imgView1.setImageResource (idIncorrecta);
-                   Toast.makeText(this, "La respuesta correcta era: " + respuestas[0][2], Toast.LENGTH_LONG).show();
-               }
-               if(numero == 3){
-                   Toast.makeText(this, "Respuesta correcta", Toast.LENGTH_SHORT).show();
-                   imgView1.setImageResource (idCorrecta);   }
-               if(numero == 4){ imgView1.setBackgroundColor(2);
-                   //Toast.makeText(this, "Respuesta incorrecta", Toast.LENGTH_LONG).show();
-                   imgView1.setImageResource (idIncorrecta);
-                   Toast.makeText(this, "La respuesta correcta era: " + respuestas[0][2], Toast.LENGTH_LONG).show();
-               }
+            case 0:{
+                if(numero == 1){ imgView1.setBackgroundColor(1);
+                    //Toast.makeText(this, "Respuesta incorrecta", Toast.LENGTH_LONG).show();
+                    imgView1.setImageResource (idIncorrecta);
+                    Toast.makeText(this, "La respuesta correcta era: " + respuestas[0][2], Toast.LENGTH_LONG).show();
+                }
+                if(numero == 2){ imgView1.setBackgroundColor(2);
+                    //Toast.makeText(this, "Respuesta incorrecta", Toast.LENGTH_LONG).show();
+                    imgView1.setImageResource (idIncorrecta);
+                    Toast.makeText(this, "La respuesta correcta era: " + respuestas[0][2], Toast.LENGTH_LONG).show();
+                }
+                if(numero == 3){
+                    Toast.makeText(this, "Respuesta correcta", Toast.LENGTH_SHORT).show();
+                    imgView1.setImageResource (idCorrecta);   }
+                if(numero == 4){ imgView1.setBackgroundColor(2);
+                    //Toast.makeText(this, "Respuesta incorrecta", Toast.LENGTH_LONG).show();
+                    imgView1.setImageResource (idIncorrecta);
+                    Toast.makeText(this, "La respuesta correcta era: " + respuestas[0][2], Toast.LENGTH_LONG).show();
+                }
 
-               btn1.setText(respuestas[1][0]);
-               btn2.setText(respuestas[1][1]);
-               btn3.setText(respuestas[1][2]);
-               btn4.setText(respuestas[1][3]);
-               txtpregunta.setText(preguntas[1]);
-               contadorPreguntas++;
-               break;
-               }
+                btn1.setText(respuestas[1][0]);
+                btn2.setText(respuestas[1][1]);
+                btn3.setText(respuestas[1][2]);
+                btn4.setText(respuestas[1][3]);
+                txtpregunta.setText(preguntas[1]);
+                contadorPreguntas++;
+                break;
+            }
             case 1:{
                 if(numero == 1){
                     //Toast.makeText(this, "Respuesta incorrecta", Toast.LENGTH_LONG).show();
@@ -256,7 +244,7 @@ public class DiaMemoria extends AppCompatActivity {
                     //Toast.makeText(this, "Respuesta incorrecta", Toast.LENGTH_LONG).show();
                     imgView1.setImageResource (idIncorrecta);
                     Toast.makeText(this, "La respuesta correcta era: " + respuestas[1][3], Toast.LENGTH_LONG).show();
-                    }
+                }
                 if(numero == 4){
                     Toast.makeText(this, "Respuesta correcta", Toast.LENGTH_SHORT).show();
                     imgView1.setImageResource (idCorrecta);
@@ -594,7 +582,7 @@ public class DiaMemoria extends AppCompatActivity {
                     Toast.makeText(this, "La respuesta correcta era: " + respuestas[13][1], Toast.LENGTH_LONG).show();
                 }
                 if (numero == 4) {
-                   //Toast.makeText(this, "Respuesta incorrecta", Toast.LENGTH_LONG).show();
+                    //Toast.makeText(this, "Respuesta incorrecta", Toast.LENGTH_LONG).show();
                     imgView1.setImageResource(idIncorrecta);
                     Toast.makeText(this, "La respuesta correcta era: " + respuestas[13][1], Toast.LENGTH_LONG).show();
                 }
@@ -788,9 +776,41 @@ public class DiaMemoria extends AppCompatActivity {
             btn4.setEnabled(false);*/
             btnVolver.setVisibility(View.VISIBLE);
             btnVolver.setEnabled(true);
-            txtpregunta.setText("¡NUNCA MÁS!\n MEMORIA, VERDAD Y JUSTICIA");
+            txtpregunta.setText("¡¡LAS MALVINAS FUERON, SON \n Y SEGUIRAN SIENDO SIEMPRE ARGENTINAS");
             contadorPreguntas = 0;
         }
+    }
+
+    /*public void cargarPreguntas(View view, int numero ){
+        int idCorrecta = getResources().getIdentifier("rptacorrecta","drawable", getPackageName());
+        int idIncorrecta = getResources().getIdentifier("rtaincorrecta","drawable", getPackageName());
+
+        if(numero == 1){ imgView1.setBackgroundColor(1);
+            //Toast.makeText(this, "Respuesta incorrecta", Toast.LENGTH_LONG).show();
+            imgView1.setImageResource (idIncorrecta);
+            Toast.makeText(this, "La respuesta correcta era: " + respuestas[0][2], Toast.LENGTH_LONG).show();
+        }
+        if(numero == 2){ imgView1.setBackgroundColor(2);
+            //Toast.makeText(this, "Respuesta incorrecta", Toast.LENGTH_LONG).show();
+            imgView1.setImageResource (idIncorrecta);
+            Toast.makeText(this, "La respuesta correcta era: " + respuestas[0][2], Toast.LENGTH_LONG).show();
+        }
+        if(numero == 3){
+            Toast.makeText(this, "Respuesta correcta", Toast.LENGTH_SHORT).show();
+            imgView1.setImageResource (idCorrecta);   }
+        if(numero == 4){ imgView1.setBackgroundColor(2);
+            //Toast.makeText(this, "Respuesta incorrecta", Toast.LENGTH_LONG).show();
+            imgView1.setImageResource (idIncorrecta);
+            Toast.makeText(this, "La respuesta correcta era: " + respuestas[0][2], Toast.LENGTH_LONG).show();
         }
 
+        btn1.setText(respuestas[contadorPreguntas+1][0]);
+        btn2.setText(respuestas[contadorPreguntas+1][1]);
+        btn3.setText(respuestas[contadorPreguntas+1][2]);
+        btn4.setText(respuestas[contadorPreguntas+1][3]);
+        txtpregunta.setText(preguntas[contadorPreguntas+1]);
+        contadorPreguntas++;
+
+
+    }*/
 }
