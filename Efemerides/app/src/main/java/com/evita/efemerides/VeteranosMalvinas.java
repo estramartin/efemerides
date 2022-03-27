@@ -11,16 +11,12 @@ import android.widget.ImageView;
 import android.widget.TextView;
 import android.widget.Toast;
 
-import com.evita.efemerides.clases.ListaPreguntas;
+import com.evita.efemerides.clases.contenedores.ListaPreguntasMemoria;
 import com.evita.efemerides.clases.Pregunta;
-import com.evita.efemerides.clases.Respuesta;
-
-import java.util.ArrayList;
-import java.util.List;
 
 public class VeteranosMalvinas extends AppCompatActivity {
 
-    private ListaPreguntas listaPreguntas = new ListaPreguntas();
+    private ListaPreguntasMemoria listaPreguntas = new ListaPreguntasMemoria();
 
     int contadorPreguntas =0;
     private Button btn1;
@@ -36,6 +32,10 @@ public class VeteranosMalvinas extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_veteranos_malvinas);
+
+
+
+
 
         txtpregunta = (TextView) findViewById(R.id.textView2);
         btn1 = (Button) findViewById(R.id.button8);
@@ -112,7 +112,7 @@ public class VeteranosMalvinas extends AppCompatActivity {
 
     public void cargarPreguntas(View view, int numero ){
 
-        if(contadorPreguntas == listaPreguntas.getListaPreguntas().size()) {
+        if(contadorPreguntas == listaPreguntas.getListaPreguntas().size()-1) {
             btn1.setVisibility(View.INVISIBLE);
             btn2.setVisibility(View.INVISIBLE);
             btn3.setVisibility(View.INVISIBLE);

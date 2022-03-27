@@ -1,15 +1,18 @@
-package com.evita.efemerides.clases;
+package com.evita.efemerides.clases.contenedores;
+
+import com.evita.efemerides.clases.Pregunta;
+import com.evita.efemerides.clases.Respuesta;
 
 import java.util.ArrayList;
 import java.util.List;
 
-public class ListaPreguntas {
+public class ListaPreguntasMemoria {
 
     private List<Pregunta> listaPreguntas = new ArrayList<Pregunta>();
     private Respuesta respuesta;
     private Pregunta pregunta;
 
-    public ListaPreguntas(){
+    public ListaPreguntasMemoria(){
 
         pregunta = new Pregunta(1, "Cuando fue la guerra de malvinas?");
         respuesta = new Respuesta( 1,"2 de Abril", true);
@@ -90,6 +93,11 @@ public class ListaPreguntas {
 
     }
 
+
+    public void setListaPreguntas(Pregunta pregunta){
+        listaPreguntas.add(pregunta);
+
+    }
 
     public List<Pregunta> getListaPreguntas() {
         return listaPreguntas;
