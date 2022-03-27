@@ -5,11 +5,13 @@
     <application
         android:allowBackup="true"
         android:icon="@mipmap/ic_launcher"
-        android:label="@string/app_name"
+        android:label="Efemérides"
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/Theme.Efemerides">
-        <activity android:name=".DiaMemoria"></activity>
+        <activity android:name=".VeteranosMalvinas"></activity>
+        <activity android:name=".MenuJuegos" />
+        <activity android:name=".DiaMemoria" />
         <activity
             android:name=".MainActivity"
             android:exported="true">
