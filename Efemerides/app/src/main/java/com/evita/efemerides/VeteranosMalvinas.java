@@ -110,6 +110,7 @@ public class VeteranosMalvinas extends AppCompatActivity {
         }
     }
 
+
     public void cargarPreguntas(View view, int numero ){
 
         if(contadorPreguntas == listaPreguntas.getListaPreguntas().size()-1) {
@@ -119,7 +120,16 @@ public class VeteranosMalvinas extends AppCompatActivity {
             btn4.setVisibility(View.INVISIBLE);
             btnVolver.setVisibility(View.VISIBLE);
             btnVolver.setEnabled(true);
-            txtpregunta.setText("¡¡LAS MALVINAS FUERON, SON \n Y SEGUIRAN SIENDO SIEMPRE ARGENTINAS");
+            txtpregunta.setText(listaPreguntas.getFraseFinal());
+
+
+            int correctaIncorrecta = CorrectaIncorrecta(listaPreguntas.getPregunta(contadorPreguntas).getRespuesta(numero).getCorrecta());
+            imgView1.setImageResource(correctaIncorrecta);
+            if (listaPreguntas.getPregunta(contadorPreguntas-1).getRespuesta(numero).getCorrecta().equals(true)) {
+                Toast.makeText(this, "Respuesta correcta", Toast.LENGTH_SHORT).show();
+            } else {
+                Toast.makeText(this, "La respuesta correcta era: " + listaPreguntas.getPregunta(contadorPreguntas).RespuestaCorrecta(), Toast.LENGTH_LONG).show();
+            }
             contadorPreguntas = 0;
         }
 

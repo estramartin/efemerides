@@ -11,6 +11,7 @@ public class ListaPreguntasMemoria {
     private List<Pregunta> listaPreguntas = new ArrayList<Pregunta>();
     private Respuesta respuesta;
     private Pregunta pregunta;
+    private String fraseFinal ="¡¡LAS MALVINAS FUERON, SON \n Y SEGUIRAN SIENDO SIEMPRE ARGENTINAS";
 
     public ListaPreguntasMemoria(){
 
@@ -81,9 +82,9 @@ public class ListaPreguntasMemoria {
         listaPreguntas.add(pregunta);
 
         pregunta = new Pregunta(7, "La casa esta en ...?");
-        respuesta = new Respuesta(1,"Desorden", true);
+        respuesta = new Respuesta(1,"Desorden", false);
         pregunta.setRespuesta(respuesta);
-        respuesta = new Respuesta(2,"Orden", false);
+        respuesta = new Respuesta(2,"Orden", true);
         pregunta.setRespuesta(respuesta);
         respuesta = new Respuesta(3,"Hawai", false);
         pregunta.setRespuesta(respuesta);
@@ -91,8 +92,13 @@ public class ListaPreguntasMemoria {
         pregunta.setRespuesta(respuesta);
         listaPreguntas.add(pregunta);
 
+
+
     }
 
+    public String getFraseFinal(){
+        return fraseFinal;
+    }
 
     public void setListaPreguntas(Pregunta pregunta){
         listaPreguntas.add(pregunta);
